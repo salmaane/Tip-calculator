@@ -1,0 +1,193 @@
+html {
+    font-size: 14px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --formTextSize: 24px;
+    font-family: 'Space Mono', monospace;
+}
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    width: 4.3rem;
+    margin-bottom: 2.5rem;
+}
+input::-webkit-outer-spin-button , input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    width: 100%;
+    height: 3rem;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-bottom: 1.6rem;
+    padding: 8px 10px;
+    font-size: 23px;
+    color:  hsl(183, 100%, 15%);
+}
+
+.calculator {
+    padding: 2rem;
+    background-color: white;
+    width: 60rem;
+    height: 30rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 20px 10px hsla(183, 100%, 15%,10%);
+    display: flex;
+    gap: 3rem;
+}
+.form {
+    width: 50%;
+    color: hsl(184, 14%, 56%)
+;
+}
+#bill-input {
+    background: url("image/icon-dollar.svg")
+    no-repeat hsl(189, 41%, 97%) 12px 12px;
+    background-size: 12px;
+    margin-bottom: 2.5rem;
+}
+
+.percentage-values {
+    width: 100%;
+    margin: 0.8rem 0 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.value {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 4px;
+    padding: 7px 0;
+    cursor: pointer;
+}
+.value:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+.percentage-values #custom {
+    color:  hsl(183, 100%, 15%);
+    height: 40.4px;
+    padding: 7px 4px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16.5px;
+    margin: 0;
+}
+
+#people-number-input {
+    background: url("image/icon-person.svg")
+    no-repeat hsl(189, 41%, 97%) 12px 12px;
+    background-size: 13px;
+    position: relative;
+}
+
+.result {
+    background-color: hsl(183, 100%, 15%);
+    height: 100%;
+    width: 50%;
+    border-radius: 16px;
+    padding: 3rem 2.4rem;
+}
+.tip {
+    color: white;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.7rem;
+}
+span {
+    color: hsl(184, 14%, 56%);
+    font-size: 12px;
+}
+.amount-value, .total-value {
+    color: hsl(172, 67%, 45%);
+    font-size: 2.7rem;
+}
+#reset {
+    border: none;
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    margin-top: 4rem;
+    font-size: 18px;
+    background-color:  hsla(172, 67%, 45%,30%);
+    color:hsl(183, 100%, 15%) ;
+}
+.color#reset{
+    background-color: hsl(172, 67%, 45%);
+}
+.color#reset:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border: 2.5px solid hsl(172, 67%, 45%) !important;
+}
+
+input[type="number"].error {
+    border: 2.5px solid red !important;
+}
+#error {
+    color: red;
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    display: none;
+}
+
+
+@media screen and (max-width:700px) {
+    main {
+        margin-top: 3rem;
+        height: auto;
+    }
+    .calculator {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    .result {
+        width: auto;
+        height: auto;
+    }
+    #reset {
+        margin-top: 0;
+    }
+
+    .percentage-values {
+        width: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .form {
+        width: 100%;
+     }
+
+
+
+}

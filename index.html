@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Tip Calculator</title>
+  <link rel="icon" href="image/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+  <main>
+    <img src="image/logo.svg" alt="logo" class="logo">
+    <section class="calculator">
+
+      <form class="form" name="form">
+
+        <div class="bill">
+          <label for="bill-input">Bill<br></label>
+          <input type="number" name="bill" id="bill-input" min="0" placeholder="0">
+        </div>
+
+        <div class="tip-percentage">
+          <p>Select Tip %</p>
+          <div class="percentage-values">
+            <p class="value" data-value="5">5%</p>
+            <p class="value" data-value="10">10%</p>
+            <p class="value" data-value="15">15%</p>
+            <p class="value" data-value="25">25%</p>
+            <p class="value" data-value="50">50%</p>
+            <input type="number" placeholder="Custom" id="custom" name="custom">
+          </div>
+        </div>
+
+        <div class="people-number" style="position: relative">
+          <label for="people-number-input">Number of People</label>
+          <span id="error">can't be zero</span>
+          <input type="number" name="people" id="people-number-input" placeholder="0" min="0">
+        </div>
+
+      </form>
+
+      <div class="result">
+        <div class="amount tip">
+          <div>
+            <p>Tip Amount</p>
+            <span>/person</span>
+          </div>
+          <p class="amount-value">$0.00</p>
+        </div>
+        <div class="total tip">
+          <div>
+            <p>Total</p>
+            <span>/person</span>
+          </div>
+          <p class="total-value">$0.00</p>
+        </div>
+        <input type="reset" value="Reset" id="reset" >
+      </div>
+    </section>
+  </main>
+
+<script src="javascript.js"></script>
+</body>
+</html>
